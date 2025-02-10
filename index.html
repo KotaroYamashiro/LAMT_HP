@@ -1,77 +1,96 @@
-<!DOCTYPE html>
-<html lang="ja">
-<head>
-<meta charset="UTF-8">
-<title>企業・ビジネス向け シンプル無料ホームページテンプレート tp_biz62</title>
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="description" content="ここにサイト説明を入れます">
-<link rel="stylesheet" href="css/style.css">
+<!DOCTYPE html> <!--htmlのバージョン宣言-->
+<html lang="ja"> <!--htmlのルート要素, lang属性で言語-->
+<head> <!--ページのメタデータを記述する-->
+<meta charset="UTF-8"> <!--文字コードの指定-->
+<meta name="viewport" content="width=device-width, initial-scale=1"> <!--モバイルデバイスでの表示の最適化-->
+<title>先端モビリティ工学研究室 - Home</title>
+<meta name="description" content="北海道大学大学院先端モビリティ工学研究室のホームページです．研究のテーマや研究室のメンバーなどについて紹介しています．"> <!--説明は160字くらいで-->
+<link rel="stylesheet" href="css/style.css"> <!--cssへのリンク-->
+<script src="js/script.js" defer></script> <!--jsへのリンク-->
+<link rel="icon" href="images/icon.png"> <!--ファビコンの指定-->
+
 </head>
 
-<body class="home">
+<body class="home"> <!--bodyの開始, class明示でCSSでクラスセレクタ(.)を用いてアクセス可能-->
 
-<div id="container">
+<div id="container"> <!--id明示でCSSでidセレクタ(#)をもちいてアクセス可能-->
 
-<header>
+<header class="blur"> <!--ヘッダーの開始-->
 
-<h1 id="logo"><a href="index.html">SAMPLE COMPANY</a></h1>
+	<h1 id="logo"> <!--ロゴとタイトル-->
+		<a href="index.html">
+			<img src="images/logo.jpg" loading="lazy">
+			<div>
+				<p><h3>北海道大学 大学院工学院</h3></p>
+				<p><h2>先端モビリティ工学研究室</h2></p>
+			</div>
+		</a>
+	</h1>
 
-<!--開閉ブロック-->
-<div id="menubar">
+	<!--開閉ブロック-->
+	<div id="menubar">
 
-<nav>
-<ul>
-<li><a href="index.html">HOME</a></li>
-<li><a href="">SERVICE</a>
-	<ul>
-	<li><a href="service.html">メニューメニューメニュー</a></li>
-	<li><a href="service.html">メニュー</a></li>
-	<li><a href="service.html">メニュー</a></li>
-	<li><a href="service.html">メニュー</a></li>
-	</ul>
-</li>
-<li><a href="company.html">COMPANY</a></li>
-<li><a href="contact.html">CONTACT</a></li>
-</ul>
-</nav>
+		<nav> <!--ナビゲーションメニューの開始-->
+			<ul>
+				<li><a href="index.html">HOME</a></li> <!--'li'はリスト項目要素-->
+				<li><a href="">RESEARCH</a> <!--'ul'は順序無リスト-->
+					<ul>
+					<li><a href="service.html">メニューメニューメニュー</a></li>
+					<li><a href="service.html">メニュー</a></li>
+					<li><a href="service.html">メニュー</a></li>
+					<li><a href="service.html">メニュー</a></li>
+					</ul>
+				</li>
+				<li><a href="">FOR APPLICANTS</a>
+					<ul>
+					<li><a href="">院生の一年</a></li>
+					<li><a href="">研究環境</a></li>
+					<li><a href="">研究の社会実装</a></li>
+					<li><a href="">フォトギャラリー</a></li>
+					</ul>
+				</li>
+				<li><a href="company.html">MEMBER</a></li>
+				<li><a href="contact.html">CONTACT</a></li>
+			</ul>
+		</nav>
 
-<div class="sh">小さな端末でのみ表示させたいコンテンツがあればここに入れます。</div>
+	<!--<div class="sh">小さな端末でのみ表示させたいコンテンツがあればここに入れます。</div>-->
 
-</div>
-<!--/#menubar-->
+	</div>
+	<!--/#menubar-->
 
 </header>
 
 <aside id="mainimg">
 
-<div class="slide slide1">
-<div>
-<h1>ブランチをいじった
-</h1>
-<p>限界を超えて、前進。<br>
-常に新しい挑戦を求め、未知の領域に挑む人間です。</p>
-<p class="btn-border-radius"><a href="#">もっと詳しくみる</a></p>
-</div>
-</div>
+	<div class="slide slide1">
+		<div>
+		<h1>AIで挑む
+		</h1>
+		<p>AIによる画像識別で<br>
+		あらゆるタスクの効率化に取り組んでいます</p>
+		<!--<p class="btn-border-radius"><a href="#">もっと詳しくみる</a></p>-->
+		</div>
+	</div>
 
-<div class="slide slide2">
-<div>gi
-<h1>発想の転換。</h1>
-<p>新しい視点で世界を捉え直す。<br>
-革新を生むためのアイデアをここから発信します。</p>
-<p class="btn-border-radius"><a href="#">もっと詳しくみる</a></p>
-</div>
-</div>
+	<div class="slide slide2">
+		<div>
+		<h1>雪に挑む</h1>
+		<p>極寒の北海道で<br>
+		安全な道路環境の確保と効果的な情報提供の実現を目指しています</p>
+		<!--<p class="btn-border-radius"><a href="#">もっと詳しくみる</a></p>-->
+		</div>
+	</div>
 
-<div class="slide slide3">
-<div>
-<h1>次世代の扉を<br>
-切り開こう</h1>
-<p>あなたの手で開く未来。<br>
-新しい技術で世界を変える一歩を踏み出そう！</p>
-<p class="btn-border-radius"><a href="#">もっと詳しくみる</a></p>
-</div>
-</div>
+	<div class="slide slide3">
+		<div>
+		<h1>次世代の扉を<br>
+		切り開こう</h1>
+		<p>あなたの手で開く未来。<br>
+		新しい技術で世界を変える一歩を踏み出そう！</p>
+		<p class="btn-border-radius"><a href="#">もっと詳しくみる</a></p>
+		</div>
+	</div>
 
 </aside>
 
@@ -79,88 +98,78 @@
 
 <main>
 
-<section class="bg1">
+	<section>
+		
+		<h2 class="fade-in-text">ABOUT</h2>
+		<div>
+			<p>本質はなんだ，ちょっとはもの考えるようになったじゃんか．</p>
+		</div>
+	</section>
 
-<h2 class="c"><span class="fade-in-text">Information</span><span class="hosoku">ご案内</span></h2>
 
-<div class="list-grid1">
+	<section class="bg1">
 
-<div class="list">
-<figure><img src="images/sample1.jpg" alt=""></figure>
-<div class="text">
-<h4>ここにタイトルを入れます</h4>
-<p>ここに説明を入れます。サンプルテキスト。</p>
-</div>
-<p class="btn"><a href="service2.html">詳しくみる</a></p>
-</div>
+		<h2 class="c"><span class="fade-in-text">RESEARCH</span><span class="hosoku">テーマの一例をご紹介します</span></h2>
 
-<div class="list">
-<figure><img src="images/sample1.jpg" alt=""></figure>
-<div class="text">
-<h4>ここにタイトルを入れます</h4>
-<p>ここに説明を入れます。サンプルテキスト。</p>
-</div>
-<p class="btn"><a href="service2.html">詳しくみる</a></p>
-</div>
+		<div class="list-grid1">
 
-<div class="list">
-<figure><img src="images/sample1.jpg" alt=""></figure>
-<div class="text">
-<h4>ここにタイトルを入れます</h4>
-<p>ここに説明を入れます。サンプルテキスト。ここに説明を入れます。サンプルテキスト。ここに説明を入れます。サンプルテキスト。</p>
-</div>
-<p class="btn"><a href="service2.html">詳しくみる</a></p>
-</div>
+		<a href="service2.html">
+			<div class="list">
+				<figure><img src="images/shisei.png" alt=""></figure>
+				<div class="text">
+				<h4>AIを用いた姿勢推定</h4>
+				<p>ここに説明を入れます。サンプルテキスト。</p>
+				</div>
+				<p class="btn"></p>
+			</div>
+		</a>
 
-</div>
-<!--/.list-grid1-->
+		<a href="service2.html">
+			<div class="list">
+				<figure><img src="images/breakdown.jpg" alt=""></figure>
+				<div class="text">
+				<h4>ブレイクダウン渋滞の判別</h4>
+				<p>ここに説明を入れます。サンプルテキスト。</p>
+				</div>
+				<p class="btn"></p>
+			</div>
+		</a>
 
-</section>
+		<a href="service2.html">
+			<div class="list">
+			<figure><img src="images/narrowed_road.jpg" alt=""></figure>
+			<div class="text">
+			<h4>堆雪による幅員減少の観測</h4>
+			<p>ここに説明を入れます。サンプルテキスト。ここに説明を入れます。サンプルテキスト。ここに説明を入れます。サンプルテキスト。</p>
+			</div>
+			<p class="btn"></p>
+			</div>
+		</a>
 
-<section>
+		</div>
+		<!--/.list-grid1-->
 
-<h2><span class="fade-in-text">What's New</span><span class="hosoku">お知らせ</span></h2>
+	</section>
 
-<dl class="new">
-<dt>2024/05/19<span>その他</span></dt>
-<dd>トップのスライドショーをcssスライドショーからjQuery+cssタイプに変更。</dd>
-<dt>2024/05/15<span>その他</span></dt>
-<dd>企業・ビジネス向け シンプル無料ホームページテンプレート tp_biz62公開。</dd>
-<dt>20XX/00/00<span class="icon-bg2">重要</span></dt>
-<dd>サンプルテキスト。サンプルテキスト。サンプルテキスト。</dd>
-<dt>20XX/00/00<span class="icon-bg1">サービス</span></dt>
-<dd>サンプルテキスト。サンプルテキスト。サンプルテキスト。</dd>
-<dt>20XX/00/00<span>その他</span></dt>
-<dd>サンプルテキスト。サンプルテキスト。サンプルテキスト。</dd>
-<dt>20XX/00/00<span>その他</span></dt>
-<dd>サンプルテキスト。サンプルテキスト。サンプルテキスト。サンプルテキスト。サンプルテキスト。サンプルテキスト。サンプルテキスト。サンプルテキスト。サンプルテキスト。サンプルテキスト。サンプルテキスト。サンプルテキスト。</dd>
-</dl>
-<a href="https://q19cms.com/files_m/file/cms_oshirase.html" target="_blank"><img src="https://template-party.com/file/images/cms_oshirase/banner_oshirase_cms2.jpg" alt="無料で使えるお知らせCMSのご案内"></a>
-</section>
+	<section>
 
-<section>
+	<h2><span class="fade-in-text">NEWS</span><span class="hosoku"></span></h2>
 
-<h2><span class="fade-in-text">Read Me</span><span class="hosoku">テンプレートのご利用前に必ずお読み下さい</span></h2>
-
-<h3>利用規約のご案内</h3>
-<p>このテンプレートは、<a href="https://template-party.com/">Template Party</a>にて無料配布している『企業・ビジネス向け シンプル無料ホームページテンプレート tp_biz62』です。必ずダウンロード先のサイトの<a href="https://template-party.com/read.html">利用規約</a>をご一読の上でご利用下さい。</p>
-<p><strong class="color-check">HP最下部の著作表示『Web Design:Template-Party』は無断で削除しないで下さい。</strong><br>
-わざと見えなく加工する事も禁止です。</p>
-<p><strong class="color-check">下部の著作を外したい場合は</strong><br>
-<a href="https://template-party.com/">Template-Party</a>の<a href="https://template-party.com/member.html">ライセンス契約</a>を行う事でHP下部の著作を外す事ができます。</p>
-
-<h3>当テンプレートの詳しい使い方は</h3>
-<p><a href="company.html#about">こちらをご覧下さい。</a></p>
-
-</section>
-
-<section>
-
-<h2>ノーコードツールのご案内</h2>
-<p>htmlやcssの編集が難しい場合、<a href="https://q19cms.com/" target="_blank">クイックCMS</a>様のノーコードツール『まるごとホームページCMS』をお勧めいたします。管理画面にログインし、テキストや画像をアップロードするだけでサイトが完成します。無料で試せる試用版あり。（※サーバーはご自身で準備して頂く必要があります。）</p>
-<p><a href="https://q19cms.com/" target="_blank"><img src="https://template-party.com/images/banner/banner_marugoto.jpg" alt="クイックCMS"></a></p>
-
-</section>
+	<dl class="new">
+		<dt>2024/05/19<span>その他</span></dt>
+		<dd>トップのスライドショーをcssスライドショーからjQuery+cssタイプに変更。</dd>
+		<dt>2024/05/15<span>その他</span></dt>
+		<dd>企業・ビジネス向け シンプル無料ホームページテンプレート tp_biz62公開。</dd>
+		<dt>20XX/00/00<span class="icon-bg2">重要</span></dt>
+		<dd>サンプルテキスト。サンプルテキスト。サンプルテキスト。</dd>
+		<dt>20XX/00/00<span class="icon-bg1">サービス</span></dt>
+		<dd>サンプルテキスト。サンプルテキスト。サンプルテキスト。</dd>
+		<dt>20XX/00/00<span>その他</span></dt>
+		<dd>サンプルテキスト。サンプルテキスト。サンプルテキスト。</dd>
+		<dt>20XX/00/00<span>その他</span></dt>
+		<dd>サンプルテキスト。サンプルテキスト。サンプルテキスト。サンプルテキスト。サンプルテキスト。サンプルテキスト。サンプルテキスト。サンプルテキスト。サンプルテキスト。サンプルテキスト。サンプルテキスト。サンプルテキスト。</dd>
+	</dl>
+	</section>
 
 </main>
 
@@ -168,14 +177,15 @@
 <!--/#contents-->
 
 <ul id="footermenu">
-<li><a href="index.html">HOME</a></li>
-<li><a href="service.html">SERVICE</a></li>
-<li><a href="company.html">COMPANY</a></li>
-<li><a href="contact.html">CONTACT</a></li>
+	<li><a href="index.html">HOME</a></li>
+	<li><a href="service.html">RESEARCH</a></li>
+	<li><a href="">FOR APPLICANTS</a></li>
+	<li><a href="company.html">MEMBER</a></li>
+	<li><a href="contact.html">CONTACT</a></li>
 </ul>
 
 <footer>
-<small>Copyright&copy; <a href="index.html">SAMPLE COMPANY</a> All Rights Reserved.</small>
+<small>Copyright&copy; 2025 <a href="index.html">LAMT</a> All Rights Reserved.</small>
 <span class="pr"><a href="https://template-party.com/" target="_blank">《Web Design:Template-Party》</a></span>
 </footer>
 
