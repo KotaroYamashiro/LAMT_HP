@@ -26,7 +26,7 @@
 	--primary-color: #d15d08;		/*テンプレートのメインまたはアクセントカラー*/
 	--primary-inverse-color: #eee;		/*上のprimary-colorの対となる色*/
 	
-	--global-space: 5vw;			/*サイト内の左右へとる余白を一括管理しています。画面幅100%＝100vwです。*/
+	--global-space: 8vw;			/*サイト内の左右へとる余白を一括管理しています。画面幅100%＝100vwです。*/
 }
 
 
@@ -156,16 +156,28 @@ body:not(.home) #container {
 header {
 	display: flex;					/*flexボックスを使う指定*/
 	align-items: center;			/*垂直揃えの指定。天地中央に配置されるように。*/
-	justify-content: space-between;
-	height: 70px;					/*ヘッダーの高さ*/
-	padding: 1vw 3vw;				/*ヘッダー内の余白。上下、左右への順番。*/
-	font-family: "Reddit Sans", "Noto Sans JP", sans-serif;
+	background-color: #141414;
+	justify-content: space-around;	/*flexbox内の要素の配置，均等割り付けの設定*/
+	height: 6vw;					/*ヘッダーの高さ*/
+	padding: 2vw 5vw;				/*ヘッダー内の余白。上下、左右への順番。*/
+	font-family: "Noto Sans JP", "Hiragino Kaku Gothic Pro", "ヒラギノ角ゴ Pro W3","sans-serif";
 	font-optical-sizing: auto;
 	font-weight: 700;
 	font-style: normal;
-    position: absolute;
-    z-index: 1;
+    position: sticky; 				/*上部に張り付く，top,leftと組み合わせる，高さ判定があるので後のコンテンツが埋もれない*/
+	top: 0px;
+	left: 0px;
+    z-index: 1;						/*表示の優先順序，前面に表示みたいな*/
     width: 100%;
+}
+
+.large-screen header{
+	height: 6vw;
+	
+} 
+
+.small-screen header {
+	height: 12vw;
 }
 
 	/*画面幅900px以上の追加指定*/
@@ -179,18 +191,55 @@ header {
 	}
 
 /*ロゴ（※画像にする場合）*/
-#logo img {
+.large-screen #logo img {
 	display: block;
-	width: 160px;	/*ロゴ画像の幅*/
+	width: 10.5vw;	/*ロゴ画像の幅*/
+	border-radius: 15px;
+}
+
+.small-screen #logo img {
+	display: block;
+	width: 21vw;	/*ロゴ画像の幅*/
+	border-radius: 15px;
 }
 
 /*ロゴ（テキストにする場合）*/
 #logo a {
-	display: block;text-decoration: none;
-	font-size: 1.2rem;	/*文字サイズを120%に*/
-	font-weight: 800;	/*文字の太さ*/
+	display: flex;
+	text-decoration: none;
+	justify-content: space-around;
+	align-items: center;
+	gap: 1rem;
+	font-weight: 50;	/*文字の太さ*/
+	text-align: center;
+	line-height: 0px;
 }
 
+#logo h2
+
+#logo h3 {
+	font-size: 1vw;
+}
+
+#logo :hover {
+	color: var(--text-color);
+}
+
+.large-screen #logo h2 {
+	font-size: 1.5vw;
+}
+
+.large-screen #logo h3 {
+	font-size: 1vw;
+}
+
+.small-screen #logo h2 {
+	font-size: 4vw;
+}
+
+.small-screen #logo h3 {
+	font-size: 3vw;
+}
 
 /*メニューブロック初期設定
 ---------------------------------------------------------------------------*/
@@ -226,8 +275,8 @@ a.ddmenu::before {
 /*メニューブロック全体の設定*/
 .large-screen #menubar > nav > ul {
 	display: flex;		/*横並びにする*/
-	font-size: 0.85rem;	/*文字サイズ。85%。*/
-	gap: 0.5rem;		/*メニュー同士の間に空けるマージン的な要素*/
+	font-size: 0.8rem;	/*文字サイズ。85%。*/
+	gap: 0.05rem;		/*メニュー同士の間に空けるマージン的な要素*/
 }
 
 /*メニュー１個あたりの設定*/
@@ -268,24 +317,30 @@ a.ddmenu::before {
 ---------------------------------------------------------------------------*/
 /*メニューブロック設定*/
 .small-screen #menubar.display-block {
-	position: fixed;overflow: auto;z-index: 100;
+	position: fixed;overflow: visible;z-index: 100;
 	left: 0px;top: 0px;
 	width: 100%;
-	height: 100%;
+	height: 100vh;
 	padding-top: 90px;
 	background: rgba(0,0,0,0.9);		/*背景色*/
-	animation: animation1 0.2s both;	/*animation1を実行する。0.2sは0.2秒の事。*/
+	animation: opa1 0.2s both;	/*opa1を実行する。0.2sは0.2秒の事。*/
 }
 
 /*メニュー１個あたりの設定*/
 .small-screen #menubar nav ul li {
-	border: 1px solid #ccc;	/*枠線の幅、線種、色*/
-	margin: 1rem;			/*メニューの外側に空けるスペース*/
-	border-radius: 5px;		/*角を丸くする指定*/
+	border: 3px solid #ccc;	/*枠線の幅、線種、色*/
+	border-radius: 15px;		/*角丸せってい*/
+	margin: 4vw 15vw;			/*メニューの外側に空けるスペース*/
+	padding: 0 2rem;		/*メニュー内の余白。上下、左右へ。*/
+}
+.small-screen #menubar nav ul li ul li {
+	border: 3px solid #ccc;	/*枠線の幅、線種、色*/
+	border-radius: 15px;		/*角丸せってい*/
+	margin: 2vw 0vw;			/*メニューの外側に空けるスペース*/
 	padding: 0 2rem;		/*メニュー内の余白。上下、左右へ。*/
 }
 .small-screen #menubar a {
-	padding: 1rem;	/*メニュー内の余白*/
+	padding: 0.8rem;	/*メニュー内の余白*/
 }
 
 /*文字色*/
@@ -293,7 +348,7 @@ a.ddmenu::before {
 	color: #fff;
 }
 
-/*900px以下でのみ表示させるブロック*/
+/*700px以下でのみ表示させるブロック*/
 #menubar .sh {
 	font-weight: normal;		/*文字の太さを標準にする*/
 	padding: 1rem 2rem 2rem;	/*上、左右、下へのブロック内の余白*/
@@ -308,7 +363,7 @@ a.ddmenu::before {
 	position: fixed;z-index: 101;
 	cursor: pointer;
 	right: 3vw;			/*右からの配置場所指定*/
-	top: 1vw;				/*上からの配置場所指定*/
+	top: 1.5vw;				/*上からの配置場所指定*/
 	padding: 16px 14px;		/*上下、左右への余白*/
 	width: 46px;			/*幅（３本バーが出ている場合の幅になります）*/
 	height: 46px;			/*高さ*/
@@ -321,30 +376,32 @@ a.ddmenu::before {
 #menubar_hdr span {
 	display: block;
 	transition: 0.3s;	/*アニメーションにかける時間。0.3秒。*/
-	border-top: 1.5px solid #333;	/*線の幅、線種、色*/
+	border-top: 3px solid #d4d4d4;	/*線の幅、線種、色*/
+	border-radius: 1px;
 }
 
 /*×印が出ている状態の3本バーの背景色*/
 #menubar_hdr.ham {
-	background: #ff0000;
+	background: #ff000000;
 }
 
 /*×印が出ている状態の設定。※１本目および２本目のバーの共通設定。*/
 #menubar_hdr.ham span:nth-of-type(1),
 #menubar_hdr.ham span:nth-of-type(3) {
 	transform-origin: center center;	/*変形の起点。センターに。*/
-	width: 20px;						/*バーの幅*/
-	border-color: #fff;					/*線の色だけ上書き*/
+	width: 25px;						/*バーの幅*/
+	border-color: #d4d4d4;					/*線の色だけ上書き*/
+	border-radius: 1px;
 }
 
 /*×印が出ている状態の設定。※１本目のバー。*/
 #menubar_hdr.ham span:nth-of-type(1){
-	transform: rotate(45deg) translate(3.8px, 5px);	/*回転45°と、X軸Y軸への移動距離の指定*/
+	transform: rotate(45deg) translate(3.7px, 4.9px);	/*回転45°と、X軸Y軸への移動距離の指定*/
 }
 
 /*×印が出ている状態の設定。※３本目のバー。*/
 #menubar_hdr.ham span:nth-of-type(3){
-	transform: rotate(-45deg) translate(3.8px, -5px);	/*回転-45°と、X軸Y軸への移動距離の指定*/
+	transform: rotate(-45deg) translate(3.7px, -4.9px);	/*回転-45°と、X軸Y軸への移動距離の指定*/
 }
 
 /*×印が出ている状態の設定。※２本目のバー。*/
@@ -572,6 +629,8 @@ animationの行の「0.05s」が文字の出現のなめらかさで、大きい
 /*ボックス１個あたり*/
 .list-grid1 .list {
     display: grid;
+	border-radius: 15px;
+	
 }
 
 /*list内の全ての要素のmarginとpaddingを一旦リセット*/
@@ -610,10 +669,13 @@ animationの行の「0.05s」が文字の出現のなめらかさで、大きい
 
 /*ボックス１個あたり*/
 .list-grid1 .list {
-	padding: 1rem;			/*ボックス内の余白*/
+	margin: 10px;
+	padding: 1.5rem;			/*ボックス内の余白*/
 	background: #fff;		/*背景色*/
     grid-template-rows: auto 1fr;	/*１つ目（この場合はfigure要素のサイズ）は自動に、２つ目（この場合はtextブロック））を残った幅で使う*/
-	box-shadow: 5px 5px 20px rgba(0,0,0,0.1);	/*ボックスの影。右へ、下へ、ぼかし幅、0,0,0は黒の事で0.1は色が10%出た状態。*/
+	box-shadow: 0px 5px 3px 3px rgba(0,0,0,0.1);	/*ボックスの影。右へ、下へ、ぼかし幅、0,0,0は黒の事で0.1は色が10%出た状態。*/
+	height: min(60vh,65vw);
+	overflow: auto;
 }
 
 /*ボックス内のfigure画像*/
@@ -808,7 +870,7 @@ animationの行の「0.05s」が文字の出現のなめらかさで、大きい
 .block {display: block !important;}
 
 	/*画面幅900px以上の追加指定*/
-	@media screen and (min-width:900px) {
+	@media screen and (min-width:800px) {
 
 	.ws {width: 48%;display: inline;}
 	.sh {display: none;}
