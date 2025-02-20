@@ -422,6 +422,7 @@ a.ddmenu::before {
     width: 100%;           /* ページ幅に合わせる */
     height: auto;          /* 縦横比を保ったまま自動調整 */
     display: block;        /* ブロック要素として表示 */
+	padding-top: 6vw;
 }
 
 .page.top h1,
