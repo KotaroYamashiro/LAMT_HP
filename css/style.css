@@ -501,6 +501,7 @@ main h4 {
 	
 	/*main-contentsブロック*/
 	.main-contents {
+		width: 45%;	/*幅*/
 		margin-bottom: 0;
 		order: 2;		/*並び順。数字の小さい順番に表示されます。*/
 		flex: 1;
@@ -508,7 +509,7 @@ main h4 {
 	
 	/*sub-contentsブロック共通*/
 	.sub-contents {
-		width: 230px;	/*幅*/
+		width: 45%;	/*幅*/
 	}
 	
 	/*1つ目のsub-contents*/
