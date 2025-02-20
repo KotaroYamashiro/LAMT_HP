@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>メンバー紹介｜生化学研究室｜北海道大学大学院 薬学研究院</title>
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+            background: #132940;
+            color: white;
+        }
+        .header {
+            background-image: url('images/head.png');
+            background-size: cover;
+            background-position: center;
+            height: 300px;
+        }
+        .container {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+            text-align: left;
+        }
+        .profile {
+            margin: 20px 0;
+            padding: 10px;
+            border-bottom: 2px solid #fff;
+        }
+        .profile h2, .profile p {
+            margin: 5px 0;
+        }
+        .profile p.email {
+            font-style: italic;
+            color: #ccc;
+        }
+        .button {
+            display: inline-block;
+            padding: 10px 20px;
+            margin-top: 10px;
+            background-color: #0073e6;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+        }
+        .button:hover {
+            background-color: #005bb5;
+        }
+        .footer {
+            background-image: url('footer-image.jpg');
+            background-size: cover;
+            background-position: center;
+            height: 150px;
+            margin-top: 20px;
+        }
+	</style>
+</head>
+
+<body>
+<div id="container">
+<header>
+
+	<h1 id="logo"><a href="index.html">LAMT</a></h1>
+	
+	<!--開閉ブロック-->
+	<div id="menubar">
+	
+	<nav>
+	<ul>
+	<li><a href="index.html">HOME</a></li>
+	<li><a href="">SERVICE</a>
+		<ul>
+		<li><a href="service.html">メニュー</a></li>
+		<li><a href="service.html">メニュー</a></li>
+		<li><a href="service.html">メニュー</a></li>
+		<li><a href="service.html">メニュー</a></li>
+		</ul>
+	</li>
+	<li><a href="company.html">COMPANY</a></li>
+	<li><a href="contact.html">CONTACT</a></li>
+	</ul>
+	</nav>
+	
+	<div class="sh">小さな端末でのみ表示させたいコンテンツがあればここに入れます。</div>
+	
+	</div>
+	<!--/#menubar-->
+	
+</header>
+<a href="">
+	<img src="images/head.png" alt="ロゴの名前" style="height: 300px;">
+</a>
+    <div class="container">
+
+        <h1>メンバー紹介 | Members</h1>
+        
+        <div class="profile">
+            <h2>⽊原 章雄 教授 | Professor Akio KIHARA</h2>
+            <p>Email: kihara(at)pharm.hokudai.ac.jp</p>
+            <p>学部担当授業科⽬：⽣化学 I，⽣化学 II</p>
+            <a href="https://www.pharm.hokudai.ac.jp/seika/members/akio_kihara.php" class="button">DETAILED PROFILE</a>
+        </div>
+        
+        <div class="profile">
+            <h2>佐々 貴之 准教授 | Associate Professor Takayuki SASSA</h2>
+            <p>Email: tasasa(at)pharm.hokudai.ac.jp</p>
+            <p>学部担当授業科⽬：⽣理学，⽣物化学実習 III など</p>
+            <a href="https://www.pharm.hokudai.ac.jp/seika/members/takayuki_sassa.php" class="button">DETAILED PROFILE</a>
+        </div>
+        
+        <div class="profile">
+            <h2>永沼 達郎 助教 | Assistant Professor Tatsuro NAGANUMA</h2>
+            <p>Email: tatsuro-naganuma(at)pharm.hokudai.ac.jp</p>
+            <a href="https://www.pharm.hokudai.ac.jp/seika/members/tatsuro_naganuma.php" class="button">DETAILED PROFILE</a>
+        </div>
+        
+        <div class="profile">
+            <h2>城島 啓佑 助教 | Assistant Professor Keisuke JOJIMA</h2>
+            <p>Email: k_jojima(at)pharm.hokudai.ac.jp</p>
+            <a href="https://www.pharm.hokudai.ac.jp/seika/members/keisuke_jojima.php" class="button">DETAILED PROFILE</a>
+        </div>
+    </div>
+
+    <div class="footer"></div>
+
+    <script>
+        document.getElementById("menu-toggle").addEventListener("click", function() {
+            document.getElementById("menubar").classList.toggle("active");
+        });
+    </script>
+</div>
+</body>
+</html>

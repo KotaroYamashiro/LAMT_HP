@@ -14,8 +14,10 @@
 
 /*テンプレート専用cssファイルの読み込み
 ---------------------------------------------------------------------------*/
-@import url("slide.css");
+/* @import url("slide.css"); */
 @import url("inview.css");
+@import url("pagetop.css");
+@import url("slide.css");
 
 
 /*CSSカスタムプロパティ（サイト全体を一括管理する為の設定）
@@ -352,6 +354,43 @@ a.ddmenu::before {
 	display: none;	/*２本目は使わないので非表示にする*/
 }
 
+/*ページトップ*/
+.page.top {
+    text-align: left;
+    width: 100%;
+    height: auto;
+}
+
+.bg-image {
+    width: 100%;           /* ページ幅に合わせる */
+    height: auto;          /* 縦横比を保ったまま自動調整 */
+    display: block;        /* ブロック要素として表示 */
+}
+
+.page.top h1,
+.page.top p {
+    position: absolute;
+    width: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    color: white;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    z-index: 2;
+}
+
+.page.top h1 {
+    top: 28%;              /* 画像内の縦位置を調整 */
+    font-size: 4em;
+    margin: 0;
+	padding-left: 1%;
+}
+
+.page.top p {
+    top: 28%;              /* 画像内の縦位置を調整 */
+    font-size: 1.5em;
+    margin: 0;
+	padding-left: 1%;
+}
 
 /*main
 ---------------------------------------------------------------------------*/
@@ -376,8 +415,14 @@ main h2 .hosoku {
 
 /*h3(見出し)要素*/
 main h3 {
+	font-size: 30px;
 	display: inline-block;
 	border-bottom: 3px solid var(--text-color);	/*下線の幅、線種、varは色のことで、css冒頭で指定しているtext-colorを読み込みます*/
+}
+
+/*h4(見出し)要素*/
+main h4 {
+	font-size: 24px;
 }
 
 
@@ -491,6 +536,9 @@ footer {
 	font-size: 0.7rem;		/*文字サイズ。bodyのfont-sizeの70%です。*/
 	text-align: center;		/*内容をセンタリング*/
 	padding: 20px;			/*ボックス内の余白*/
+	background-image:url(../images/footer1.jpg);
+	height: auto;
+	width: 100%
 }
 
 /*リンクテキスト*/
@@ -815,3 +863,7 @@ animationの行の「0.05s」が文字の出現のなめらかさで、大きい
 	.pc {display: block;}
 
 	}/*追加指定ここまで*/
+
+.orange-text {
+	color: #d15d08;
+}
