@@ -13,12 +13,13 @@
 	padding-top: 80%;
 	position: relative;
 	color: #fff;
-	text-shadow: 0px 0px 5px rgba(0,0,0,0.5);
+	
 }
 
 /*３セットのスライドショーを囲むそれぞれのブロック*/
 #mainimg div div {
-	width: 45vw;	/*幅。画面の45%。*/
+	width: max(45vw, 45rem);	/*幅。画面の45%。*/
+	
 }
 
 /*３枚の画像の共通設定*/
@@ -27,21 +28,22 @@
 	position: absolute;right: 0px;top: 0px;
 	display: flex;
 	align-items: center;
-	padding: 0 5vw;
+	padding: 0 0vw;
 	justify-content: center;	/*テキストブロックを中央に*/
 	text-align: center;			/*テキストをセンタリング*/
 	opacity: 0;
-	transition: opacity 1s;	/*ここの1s（＝1秒）を変更すると、フェードのスピードを変更できます。*/
+	transition: opacity 2s;	/*ここの1s（＝1秒）を変更すると、フェードのスピードを変更できます。*/
+	
 }
 
 /*１枚目画像*/
 .slide1 {
-	background: url('../images/1.jpg') no-repeat center center / cover;	/*１枚目の背景画像の読み込み*/
+	background: url('../images/ai_image.jpg') no-repeat center center / cover;	/*１枚目の背景画像の読み込み*/
 }
 
 /*２枚目画像*/
 .slide2 {
-	background: url('../images/2.jpg') no-repeat center center / cover;	/*２枚目の背景画像の読み込み*/
+	background: url('../images/snow_image.jpg') no-repeat center center / cover;	/*２枚目の背景画像の読み込み*/
 }
 
 /*３枚目画像*/
@@ -52,15 +54,17 @@
 /*大きなテキスト*/
 #mainimg h1 {
 	margin: 0;padding: 0;
-	font-size: 6vw;		/*文字サイズ。100vwは画面幅100%のことです。*/
+	font-size: max(6vw,50px);		/*文字サイズ。100vwは画面幅100%のことです。*/
 	line-height: 1.5;	/*行間を少し狭く*/
 	font-weight: 500;	/*文字の太さを少し太く*/
+	text-shadow: 0px 5px 5px rgba(0,0,0,0.5);
 }
 
 /*小さなテキスト*/
 #mainimg p {
-	font-size: 1.4vw;		/*文字サイズ。100vwは画面幅100%のことです*/
-	padding-left: 0.5rem;	/*左に空ける余白。0.5文字分。*/
+	font-size: max(1.4vw,16px);		/*文字サイズ。100vwは画面幅100%のことです*/
+	padding-left: 0rem;	/*左に空ける余白。0.5文字分。*/
+	text-shadow: 0px 5px 5px rgba(0,0,0,0.5);
 }
 
 

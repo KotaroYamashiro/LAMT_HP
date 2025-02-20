@@ -26,7 +26,7 @@ var $menubarHdr = $('#menubar_hdr');
 
 // menu
 $(window).on("load resize", debounce(function() {
-    if(window.innerWidth < 800) {	// ここがブレイクポイント指定箇所です
+    if(window.innerWidth < 900) {	// ここがブレイクポイント指定箇所です
         // 小さな端末用の処理
         $('body').addClass('small-screen').removeClass('large-screen');
         $menubar.addClass('display-none').removeClass('display-block');
